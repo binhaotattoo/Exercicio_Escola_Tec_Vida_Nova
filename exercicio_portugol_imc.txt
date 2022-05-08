@@ -1,0 +1,85 @@
+
+		cadeia nome
+		real altura, peso, imc, 
+		Soma_Jovens_Idade_H=0, Soma_Jovens_Peso_H=0, Soma_Jovens_Altura_H=0, Contador_Grupo_Jovens_H=0,	
+	     Soma_Jovens_Idade_M=0, Soma_Jovens_Peso_M=0, Soma_Jovens_Altura_M=0, Contador_Grupo_Jovens_M=0,	
+		Soma_Adulto_Idade_H=0, Soma_Adulto_Peso_H=0, Soma_Adulto_Altura_H=0, Contador_Grupo_Adulto_H=0,	
+	     Soma_Adulto_Idade_M=0, Soma_Adulto_Peso_M=0, Soma_Adulto_Altura_M=0, Contador_Grupo_Adulto_M=0,
+	     Soma_Expert_Idade_H=0, Soma_Expert_Peso_H=0, Soma_Expert_Altura_H=0, Contador_Grupo_Expert_H=0,	
+	     Soma_Expert_Idade_M=0, Soma_Expert_Peso_M=0, Soma_Expert_Altura_M=0, Contador_Grupo_Expert_M=0,
+		Media_Jovens_Idade_H=0, Media_Jovens_Peso_H=0, Media_Jovens_Altura_H=0, 	
+	     Media_Jovens_Idade_M=0, Media_Jovens_Peso_M=0, Media_Jovens_Altura_M=0, 	
+		Media_Adulto_Idade_H=0, Media_Adulto_Peso_H=0, Media_Adulto_Altura_H=0, 	
+	     Media_Adulto_Idade_M=0, Media_Adulto_Peso_M=0, Media_Adulto_Altura_M=0, 
+	     Media_Expert_Idade_H=0, Media_Expert_Peso_H=0, Media_Expert_Altura_H=0, 	
+	     Media_Expert_Idade_M=0, Media_Expert_Peso_M=0, Media_Expert_Altura_M=0
+	     inteiro idade, Quantidade_Entrevistados
+	     caracter fim='n', sexo
+
+	     
+	     escreva("##############################\n")
+		escreva("#### PESQUISA CÁLCULO IMC ####\n")
+		escreva("##############################\n")
+		escreva("\n") 
+	         
+			 
+		 
+	   
+	faca 
+	{
+		//limpa()
+		escreva("\nDigite sua idade: ")
+		leia (idade)
+		
+
+		 se (idade<18 ){
+		escreva("Você é menor de idade, não pode participar da pesquisa:")
+		}
+	 
+	
+		senao {
+  
+		limpa()	
+	escreva("\nQual seu nome?: ")
+	leia(nome)
+	escreva("\nQual seu sexo? 1 para homem ou 2 para mulher: ")
+	leia(sexo)
+	se (sexo != '1'e sexo != '2')
+	{
+	escreva("Valor invalido Digite 1 para homem ou 2 para mulher")
+	leia(sexo)
+	}
+	escreva("\npeso: ")
+	leia(peso)
+	escreva("\naltura: ")
+	leia(altura)
+	
+	
+	imc = (peso / (altura * altura ) * 10000) //calculo imc
+	escreva(imc)
+	
+		escreva("\nDeseja finalizar, S para sim ou N para não: ")
+	leia(fim)
+	
+	
+	se ( imc < 18.5 )
+{
+	escreva("\n")
+	escreva("\nVocê está abaixo do peso")
+}
+	senao se (imc < 24.9 )
+	{
+	escreva("\n")
+	escreva("\nSeu peso está ok")
+	}
+	senao
+	escreva("\nVocê está acima do peso, sobrepeso ")
+	escreva ("\nFim da pesquisa.")
+	
+
+		}
+	
+			
+	
+	}
+	enquanto((fim!='S')e (fim!='s'))
